@@ -31,7 +31,6 @@ def kelime_say(event=None):
     karakter_sayisi = len(metin)
     durum_label.config(text=f"Kelime: {kelime_sayisi} | Karakter: {karakter_sayisi}")
 
-# Ana pencere
 pencere = tk.Tk()
 pencere.title("Not Defteri (Kelime Sayarlı)")
 pencere.geometry("600x450")
@@ -40,7 +39,7 @@ pencere.geometry("600x450")
 menu_bar = tk.Menu(pencere)
 pencere.config(menu=menu_bar)
 
-# Dosya menüsü
+
 dosya_menu = tk.Menu(menu_bar, tearoff=0)
 menu_bar.add_cascade(label="Dosya", menu=dosya_menu)
 dosya_menu.add_command(label="Aç", command=not_ac)
