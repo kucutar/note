@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
+
 def not_kaydet():
     dosya_yolu = filedialog.asksaveasfilename(defaultextension=".txt",
                                               filetypes=[("Metin Dosyası", "*.txt")])
@@ -35,7 +36,7 @@ pencere = tk.Tk()
 pencere.title("Not Defteri (Kelime Sayarlı)")
 pencere.geometry("600x450")
 
-# Menü çubuğu
+
 menu_bar = tk.Menu(pencere)
 pencere.config(menu=menu_bar)
 
@@ -47,12 +48,12 @@ dosya_menu.add_command(label="Kaydet", command=not_kaydet)
 dosya_menu.add_separator()
 dosya_menu.add_command(label="Çıkış", command=pencere.quit)
 
-# Metin alanı
+
 text_area = tk.Text(pencere, wrap="word", font=("Arial", 12))
 text_area.pack(expand=True, fill="both")
 
 # Kelime/karakter sayacı etiketi
-durum_label = tk.Label(pencere, text="Kelime: 0 | Karakter: 0", anchor="w")
+durum_label = tk.Label(pencere, text="Word: 0 | Char: 0", anchor="w")
 durum_label.pack(fill="x")
 
 # Metin değiştiğinde kelime say
