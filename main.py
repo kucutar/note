@@ -52,11 +52,10 @@ dosya_menu.add_command(label="Çıkış", command=pencere.quit)
 text_area = tk.Text(pencere, wrap="word", font=("Arial", 12))
 text_area.pack(expand=True, fill="both")
 
-# Kelime/karakter sayacı etiketi
 durum_label = tk.Label(pencere, text="Word: 0 | Char: 0", anchor="w")
 durum_label.pack(fill="x")
 
-# Metin değiştiğinde kelime say
+
 text_area.bind("<KeyRelease>", kelime_say)
 
 pencere.mainloop()
